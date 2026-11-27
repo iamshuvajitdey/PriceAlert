@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.view.WindowInsets
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -36,7 +35,7 @@ class MainActivity : Activity() {
                     insets.systemWindowInsetRight + dp(20),
                     insets.systemWindowInsetBottom + dp(16)
                 )
-                WindowInsets.CONSUMED
+                insets.consumeSystemWindowInsets()
             }
         }
         surface.addView(label("Drop Price", 32f))
